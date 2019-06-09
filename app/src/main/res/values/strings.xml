@@ -5,8 +5,11 @@
     <string name="change_language_settings">Change Language Settings</string>
     <string name="menu_movie">Movies</string>
     <string name="menu_tv">TV Shows</string>
-<string name="movie">Welocome on Movies Catalogue</string>
-<string name="tv">Welcome on TV Shows Catalogue</string>
+    <string name="movie">Welocome on Movies Catalogue</string>
+    <string name="tv">Welcome on TV Shows Catalogue</string>
+
+    <string name="movie_title">Movies Tittle</string>
+    <string name="movie_description">Moviess Description</string>
 
     <string-array name="data_name">
         <item>A Star is Born</item>
@@ -28,11 +31,11 @@
         <item>Spider-man : Into the Spider-verse</item>
         <item>The Girl in the Spider’s Web</item>
         <item>The Mule</item>
-        <item>Venom</item>
+
     </string-array>
 
     <string-array name="data_description">
-        <item>Seasoned musician Jackson Maine discovers — and falls in love with — struggling artist Ally. She has just about given up on her dream to make it big as a singer — until Jack coaxes her into the spotlight. But even as Ally’s career takes off, the personal side of their relationship is breaking down, as Jack fights an ongoing battle with his own internal demons.</item>
+        <item>A Star Is Born is a 2018 American musical romantic drama film produced and directed by Bradley Cooper (in his directorial debut) and written by Eric Roth, Cooper and Will Fetters. A remake of the 1937 film of the same name, it stars Cooper, Lady Gaga, Dave Chappelle, Andrew Dice Clay, and Sam Elliott, and follows a hard-drinking musician (Cooper) who discovers and falls in love with a young singer (Gaga). It marks the third remake of the original 1937 film, after the 1954 musical and the 1976 musical.</item>
         <item>Once home to the most advanced civilization on Earth, Atlantis is now an underwater kingdom ruled by the power-hungry King Orm. With a vast army at his disposal, Orm plans to conquer the remaining oceanic people and then the surface world. Standing in his way is Arthur Curry, Orm’s half-human, half-Atlantean brother and true heir to the throne.</item>
         <item>As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.</item>
         <item>Five years after an ominous unseen presence drives most of society to suicide, a survivor and her two children make a desperate bid to reach safety.</item>
@@ -51,8 +54,7 @@
         <item>Miles Morales is juggling his life between being a high school student and being a spider-man. When Wilson "Kingpin" Fisk uses a super collider, others from across the Spider-Verse are transported to this dimension.</item>
         <item>In Stockholm, Sweden, hacker Lisbeth Salander is hired by Frans Balder, a computer engineer, to retrieve a program that he believes it is too dangerous to exist.</item>
         <item>Earl Stone, a man in his 80s who is broke, alone, and facing foreclosure of his business when he is offered a job that simply requires him to drive. Easy enough, but, unbeknownst to Earl, he’s just signed on as a drug courier for a Mexican cartel. He does so well that his cargo increases exponentially, and Earl hit the radar of hard-charging DEA agent Colin Bates.</item>
-        <item>Investigative journalist Eddie Brock attempts a comeback following a scandal, but accidentally becomes the host of Venom, a violent, super powerful alien symbiote. Soon, he must rely on his newfound powers to protect the world from a shadowy organization looking for a symbiote of their own.</item>
-    </string-array>
+        </string-array>
 
     <array name="data_photo">
         <item>@drawable/poster_a_start_is_born</item>

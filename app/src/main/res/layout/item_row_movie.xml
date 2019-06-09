@@ -6,13 +6,14 @@
     android:orientation="horizontal"
     android:padding="@dimen/activity_vertical_margin">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/img_item_photo"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
-        tools:src="@android:color/darker_gray" />
+        tools:src="@android:color/darker_gray"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,13 +28,13 @@
             android:layout_marginBottom="8dp"
             android:textSize="16sp"
             android:textStyle="bold"
-            tools:text="@string/heroes_name" />
+            tools:text="@string/tittle_movies" />
         <TextView
             android:id="@+id/tv_item_from"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
-            android:maxLines="2"
-            tools:text="@string/description" />
+            android:maxLines="4"
+            tools:text="@string/movie_description" />
     </LinearLayout>
 </RelativeLayout>

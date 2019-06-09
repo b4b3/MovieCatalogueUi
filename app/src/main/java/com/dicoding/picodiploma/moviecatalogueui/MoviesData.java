@@ -18,17 +18,5 @@ public class MoviesData {
                 {"Soepomo", "Prof. Mr. Dr. Soepomo (Ejaan Soewandi: Supomo; lahir di Sukoharjo, Jawa Tengah, 22 Januari 1903 – meninggal di Jakarta, 12 September 1958 pada umur 55 tahun) adalah seorang pahlawan nasional Indonesia. Soepomo dikenal sebagai arsitek Undang-undang Dasar 1945, bersama dengan Muhammad Yamin dan Soekarno.", "https://upload.wikimedia.org/wikipedia/commons/c/c3/Supomo_from_President_Website.JPG"},
                 {"Tan Malaka", "Tan Malaka atau Ibrahim gelar Datuk Sutan Malaka (lahir di Nagari Pandam Gadang, Suliki, Lima Puluh Kota, Sumatera Barat, 2 Juni 1897 – meninggal di Desa Selopanggung, Kediri, Jawa Timur, 21 Februari 1949 pada umur 51 tahun) adalah seorang pembela kemerdekaan Indonesia, tokoh Partai Komunis Indonesia, juga pendiri Partai Murba, dan merupakan salah satu Pahlawan Nasional Indonesia.", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/TanMalaka_DariPendjara_ed3.jpg/330px-TanMalaka_DariPendjara_ed3.jpg"},
         };
-        /*
-        public static ArrayList<Movie> getListData(){
-                ArrayList<Movie> list = new ArrayList<>();
-                for (String[] aData : data) {
-                        Movie movie = new Movie();
-                        movie.setName(aData[0]);
-                        movie.setFrom(aData[1]);
-                        //movie.setPhoto(aData[2]);
-                        list.add(movie);
-                }
-                return list;
-        }
-        */
+
 }

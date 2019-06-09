@@ -106,7 +106,6 @@ public class MovieFragment extends Fragment {
         //membuat loop untuk memanggil item dari dataname
         for (int i = 0; i < dataName.length;i++){
             Movie movie = new Movie();
-            //movie.setPhoto(dataPhoto.getResourceId(i,-
             movie.setPhoto(dataPhoto.getResourceId(i,-1));
             movie.setName(dataName[i]);
             movie.setFrom(dataDescription[i]);
