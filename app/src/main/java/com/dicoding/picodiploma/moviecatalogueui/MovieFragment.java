@@ -45,7 +45,7 @@ public class MovieFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
-       
+
         addItem();
 
         return view;
