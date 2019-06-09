@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movies and TV Shows Catalogue</string>
+    <string name="tittle_movies">Selamat datang di halaman Dashboard</string>
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="menu_movie">Movies</string>
+    <string name="menu_tv">TV Shows</string>
+<string name="movie">Welocome on Movies Catalogue</string>
+<string name="tv">Welcome on TV Shows Catalogue</string>
+</resources>

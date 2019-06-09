@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Katalog Film dan Acara TV</string>
+    <string name="tittle_movies">Selamat datang di halaman Dashboard</string>
+    <string name="change_language_settings">Atur Bahasa</string>
+    <string name="menu_movie">Film</string>
+    <string name="menu_tv">Acara TV</string>
+    <string name="movie">>Selamat datang di halaman Film</string>
+    <string name="tv">>Selamat datang di halaman Acara TV</string>
+</resources>
