@@ -2,6 +2,7 @@ package com.dicoding.picodiploma.moviecatalogueui;
 
 
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 public class MovieFragment extends Fragment {
     private String[] arrayTitle;
     private String[] arrayDesc;
-    private String[] posterMovie;
+    private TypedArray dataPhoto;
     private ListMovieAdapter movieAdapter;
     private ArrayList<Movie> listMovie;
 
