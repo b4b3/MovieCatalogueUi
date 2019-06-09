@@ -1,7 +1,8 @@
 package com.dicoding.picodiploma.moviecatalogueui;
 
 public class Movie {
-    private String name, from, photo;
+    private String name, from;
+    private int photo;
 
     public String getName() {
         return name;
@@ -19,11 +20,11 @@ public class Movie {
         this.from = from;
     }
 
-    public String getPhoto() {
+    public int getPhoto() {
         return photo;
     }
 
-    public void setPhoto(String photo) {
+    public void setPhoto(int photo) {
         this.photo = photo;
     }
 }
