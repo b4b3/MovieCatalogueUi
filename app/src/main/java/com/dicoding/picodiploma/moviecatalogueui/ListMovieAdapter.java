@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class ListMovieAdapter extends RecyclerView.Adapter<ListMovieAdapter.CategoryViewHolder> {
     private Context context;
     private ArrayList<Movie> listMovie;
+    private OnItemClickListener mListener;
 
     public ArrayList<Movie> getListMovie() {
         return listMovie;
@@ -28,6 +29,14 @@ public class ListMovieAdapter extends RecyclerView.Adapter<ListMovieAdapter.Cate
 
     public ListMovieAdapter(Context context) {
         this.context = context;
+    }
+
+    //membuat settingan untuk onclick
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+    }
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mListener=listener;
     }
 
     @NonNull
@@ -63,6 +72,19 @@ public class ListMovieAdapter extends RecyclerView.Adapter<ListMovieAdapter.Cate
             tvName = itemView.findViewById(R.id.tv_item_name);
             tvFrom = itemView.findViewById(R.id.tv_item_from);
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
+
+            //untuk menjelaskan kejadian onclick listener
+            itemView.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v ){
+                    if(mListener!=null){
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            mListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 }

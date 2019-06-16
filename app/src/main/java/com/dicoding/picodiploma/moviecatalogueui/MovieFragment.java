@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
@@ -19,10 +21,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MovieFragment extends Fragment {
+public class MovieFragment extends Fragment implements ListMovieAdapter.OnItemClickListener{
     /*
     private String[] arrayTitle;
     private String[] arrayDesc;
@@ -37,6 +40,7 @@ public class MovieFragment extends Fragment {
     private static String[] dataDescription;
     private static TypedArray dataPhoto;
     View v;
+    public static String EXTRA_MOVIE = "extra_movie";
 
 
     public MovieFragment() {
@@ -44,49 +48,12 @@ public class MovieFragment extends Fragment {
     }
 
 
-    /*
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_movie, container, false);
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.listMovie);
-        recyclerView.setHasFixedSize(true);
-
-        movieAdapter = new ListMovieAdapter(getContext());
-        recyclerView.setAdapter(movieAdapter);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
-
-
-        addItem();
-
-        return view;
-    }
-
-    private void addItem() {
-        listMovie = new ArrayList<>();
-        listMovie.addAll(MoviesData.getListData());
-        movieAdapter.setListMovie(listMovie);
-    }
-
-    */
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         v = inflater.inflate(R.layout.fragment_movie, container, false);
 
-        //balada onclick recyler-fragment
-        /*Bundle bundle=getArguments();
-        if(bundle!=null){
-            Person mPerson=bundle.getParcelable("key");
-            mPerson.setName(dataName[i]);
-            mPerson.setDetail(dataDescription[i]);
-            mPerson.setPhoto(dataPhoto.getResourceId(i, -1));
-
-
-        }*/
 
         return v;
     }
@@ -124,8 +91,37 @@ public class MovieFragment extends Fragment {
         rvCategory.setAdapter(listMovieAdapter);
 
         //implementasi onClick
-        //listHeroAdapter.setOnItemClickListener(MovieFragment.this);
+        listMovieAdapter.setOnItemClickListener(MovieFragment.this);
 
 
     }
+
+    @Override
+    public void onItemClick(int position) {
+        Movie mMovie = new Movie();
+        mMovie.setName(dataName[position]);
+        mMovie.setFrom(dataDescription[position]);
+        mMovie.setPhoto(dataPhoto.getResourceId(position, -1));
+
+        DetailMovieFragment mDetailMovieFragment = new DetailMovieFragment();
+
+        Bundle bundle = new Bundle();
+        bundle.putParcelable(EXTRA_MOVIE, mMovie);
+
+        getActivity().getSupportFragmentManager();
+
+        DetailMovieFragment fragment = new DetailMovieFragment();
+        fragment.setArguments(bundle);
+
+
+        FragmentManager mFragmentManager = getFragmentManager();
+        if (mFragmentManager != null) {
+            FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
+            mFragmentTransaction.replace(R.id.container_layout, mDetailMovieFragment, DetailMovieFragment.class.getSimpleName());
+            mFragmentTransaction.addToBackStack(null);
+            mFragmentTransaction.commit();
+        }
+
+    }
+
 }
